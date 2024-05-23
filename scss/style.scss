@@ -1,0 +1,189 @@
+@import "mixin";
+@import "variables";
+// sass --watch scss:css
+
+
+
+body{
+    @include font();
+    color: white;
+    background: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 34;
+}
+header{
+    display: flex;
+    width: 100%;
+    background-color: $yellow;
+    margin-bottom: 40px;
+
+    h1{
+        font-size: 28px;
+        margin-left: 20px;
+    }
+    .icono {
+        width: 40px; 
+        height: 40px; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        margin: 5px;
+        padding: 5px;
+        img {
+            border-radius: 5px; /* Borde redondeado */
+            max-width: 100%; /* Ajusta la imagen para que no se desborde del botón */
+            max-height: 100%; /* Ajusta la imagen para que no se desborde del botón */
+        }  
+    }
+}
+
+
+
+ 
+
+.type-container{
+    gap: 8px;
+    max-width: 800px;
+    time{
+        color: $yellow;
+    }
+    p{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 6px;
+        font-size: 22px;
+    }
+    
+    input{
+        position: absolute;
+        z-index: -999;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        
+    }
+    h3{
+        display: none;
+        text-align: center; 
+    }
+  
+}
+
+x-letra{
+    color: #fff;
+    position: relative;
+    &.active::before {
+        content: '|';
+        color: $yellow;
+        font-size: 22px;
+        position: absolute;
+        left: -45%;
+        animation: 1.2s blink infinite;
+    }
+
+    &.correcto {
+        color: $green;
+    }
+
+    &.incorrecto {
+        color: $red;
+    }
+
+    &.active.is-last::before {
+        left: 80%;
+    }
+}
+
+x-palabra{
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+    margin-left: 5px;
+
+    &.marked {
+        border-color:$red;
+    }
+}
+
+
+@keyframes blink {
+    0% , 25%{
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 0;
+    }
+}
+
+#type {
+    display: flex;
+    h2 {
+        font-weight: 400;
+        opacity: .4;
+        margin: 0;
+        font-size: 16px;
+    }
+    
+    h3 {
+        font-weight: 400;
+        margin: 0;
+        font-size: 24px;
+        color: $yellow;
+    }
+}
+
+#resultados {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    h2 {
+        font-weight: 400;
+        opacity: .4;
+        margin: 0;
+        font-size: 16px;
+    }
+    
+    h3 {
+        font-weight: 400;
+        margin: 0;
+        font-size: 24px;
+        color: $yellow;
+        
+    }
+}
+
+button {
+    background: transparent;
+    border: 0;
+    margin-top: 32px;
+    padding: 8px;
+    opacity: .4;
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 16px;
+
+    &:hover {
+        background: #444;
+        opacity: 1;
+        scale: 110%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+

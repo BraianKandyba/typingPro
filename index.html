@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="description" content="esta es una copia de la conocida aplicacion de monkey type">
+    <meta name="keywords" content="monkey type,escritura, veloz, rapida, tipado,teclas rapidas,teclas, type master ,typingPro">
+    <meta name="author" content="Braian kandyba">
+    <title>TypingPro</title>
+</head>
+<body>
+    <header>
+        <i class="icono">
+            <img src="https://cdn-icons-png.flaticon.com/512/2824/2824623.png" alt="Icono">
+        </i>
+        <h1>TypingPro</h1>
+    </header>
+
+    <main>
+        <section id="type">
+            <div class="type-container">
+                <time  id="tiempo"></time>
+                <p onclick="devolverFocus()" id="parrafo"></p>
+                <h3 id="mensaje">click en el texto continuar</h3>
+                <input autofocus id="input-parrafo" >
+                <button id="button-reset" onclick="recargarPagina()">
+                    <svg   width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747" /><path d="M20 4v5h-5" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section id="resultados">
+            <div class="resultados-container">
+                <h2 id="h2-wpm">wpm</h2>
+                <h3 id="h3-wpm"></h3>
+    
+                <h2 id="h2-accuracy">Accuracy</h2>
+                <h3 id="h3-accuracy"></h3>
+    
+                <button id="button-reset" onclick="recargarPagina()" >
+                    <svg   width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747" /><path d="M20 4v5h-5" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+    
+
+
+    <footer>
+        <p>Sitio web creado por braian kandyba©</p>
+    </footer>
+
+    <script src="js/codigo.js"></script>
+</body>
+</html>

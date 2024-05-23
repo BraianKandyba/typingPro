@@ -1,0 +1,167 @@
+@charset "UTF-8";
+body {
+  font-family: "Montserrat", sans-serif, monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 34;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: #daaf38;
+  margin-bottom: 40px;
+}
+header h1 {
+  font-size: 28px;
+  margin-left: 20px;
+}
+header .icono {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+}
+header .icono img {
+  border-radius: 5px; /* Borde redondeado */
+  max-width: 100%; /* Ajusta la imagen para que no se desborde del botón */
+  max-height: 100%; /* Ajusta la imagen para que no se desborde del botón */
+}
+
+.type-container {
+  gap: 8px;
+  max-width: 800px;
+}
+.type-container time {
+  color: #daaf38;
+}
+.type-container p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  font-size: 22px;
+}
+.type-container input {
+  position: absolute;
+  z-index: -999;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.type-container h3 {
+  display: none;
+  text-align: center;
+}
+
+x-letra {
+  color: #fff;
+  position: relative;
+}
+x-letra.active::before {
+  content: "|";
+  color: #daaf38;
+  font-size: 22px;
+  position: absolute;
+  left: -45%;
+  animation: 1.2s blink infinite;
+}
+x-letra.correcto {
+  color: #00b755;
+}
+x-letra.incorrecto {
+  color: #ca4754;
+}
+x-letra.active.is-last::before {
+  left: 80%;
+}
+
+x-palabra {
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+  margin-left: 5px;
+}
+x-palabra.marked {
+  border-color: #ca4754;
+}
+
+@keyframes blink {
+  0%, 25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+#type {
+  display: flex;
+}
+#type h2 {
+  font-weight: 400;
+  opacity: 0.4;
+  margin: 0;
+  font-size: 16px;
+}
+#type h3 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 24px;
+  color: #daaf38;
+}
+
+#resultados {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+#resultados h2 {
+  font-weight: 400;
+  opacity: 0.4;
+  margin: 0;
+  font-size: 16px;
+}
+#resultados h3 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 24px;
+  color: #daaf38;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  margin-top: 32px;
+  padding: 8px;
+  opacity: 0.4;
+  display: inline-block;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 16px;
+}
+button:hover {
+  background: #444;
+  opacity: 1;
+  scale: 110%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
