@@ -1,6 +1,6 @@
 
 const INITIAL_WORDS = [
-    "a","de nuevo","todo","también","y","otro","cualquier","alrededor","como",
+    "a","nuevo","todo","también","y","otro","cualquier","alrededor","como",
     "preguntar","en","atrás","porque","convertirse","antes","comenzar","ambos","pero",
     "por","llamar","puede","cambiar","niño","venir","podría","curso","día",
     "desarrollar","cada","temprano","fin","incluso","ojo","cara","hecho","pocos","primero","seguir",

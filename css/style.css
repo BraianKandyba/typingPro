@@ -1,9 +1,5 @@
-@charset "UTF-8";
 body {
-  font-family: "Montserrat", sans-serif, monospace;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
+  font-family: "Courier New", Courier, monospace;
   color: white;
   background: #222;
   display: flex;
@@ -12,7 +8,6 @@ body {
   align-items: center;
   width: 100%;
   margin: 0;
-  padding: 34;
 }
 
 header {
@@ -35,14 +30,14 @@ header .icono {
   padding: 5px;
 }
 header .icono img {
-  border-radius: 5px; /* Borde redondeado */
-  max-width: 100%; /* Ajusta la imagen para que no se desborde del botón */
-  max-height: 100%; /* Ajusta la imagen para que no se desborde del botón */
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .type-container {
   gap: 8px;
-  max-width: 800px;
+  max-width: 900px;
 }
 .type-container time {
   color: #daaf38;
@@ -50,8 +45,8 @@ header .icono img {
 .type-container p {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 6px;
-  font-size: 22px;
+  gap: 10px 8px;
+  font-size: 24px;
 }
 .type-container input {
   position: absolute;
@@ -66,15 +61,15 @@ header .icono img {
 }
 
 x-letra {
-  color: #fff;
+  color: #bdb6b6;
   position: relative;
+  max-width: 110px;
 }
 x-letra.active::before {
   content: "|";
   color: #daaf38;
-  font-size: 22px;
   position: absolute;
-  left: -45%;
+  left: -60%;
   animation: 1.2s blink infinite;
 }
 x-letra.correcto {
@@ -84,13 +79,12 @@ x-letra.incorrecto {
   color: #ca4754;
 }
 x-letra.active.is-last::before {
-  left: 80%;
+  left: 60%;
 }
 
 x-palabra {
   border-bottom: 1.5px solid transparent;
   transition: border-color 0.3s ease-in-out;
-  margin-left: 5px;
 }
 x-palabra.marked {
   border-color: #ca4754;
@@ -162,6 +156,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  border-top: 2px solid #daaf38;
 }
 
 /*# sourceMappingURL=style.css.map */
